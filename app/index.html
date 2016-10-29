@@ -15,7 +15,7 @@
 <body ng-cloak layout="column" ng-controller="AppController as app">
 
   <!-- Container #1 (see wireframe) -->
-  <md-toolbar layout="row" class="md-toolbar-tools">
+  <md-toolbar layout="row" class="md-toolbar-tools" md-scroll-shrink>
     <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
                aria-label="Show User List">
       <md-icon md-svg-icon="menu"></md-icon>
@@ -39,10 +39,14 @@
 
     <!-- Container #4 -->
     <md-content flex id="content">
+      <div aria-label="Profile Photo Container" class="profile-container">
+        <img class="profile-photo" style="margin: auto; max-width: 100%;" alt="Profile Photo" src="assets/images/profile.jpg">
+        <h2 class="md-display-1 profile-text md-accent">Joseph Raver</h2>
+      </div>
       <!-- Custom UserDetails component -->
-      <user-details
+      <!--<user-details
           selected="app.selected" >
-      </user-details>
+      </user-details>-->
     </md-content>
 
   </div>
